@@ -15,17 +15,7 @@ import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
 @SpringBootApplication
 public class BootProj08LayerdApplicatioinApplication {
 
-    private final EmployeeOperationController controler;
-
-    BootProj08LayerdApplicatioinApplication(EmployeeOperationController controler) {
-        this.controler = controler;
-    }
-
-//    private final EmployeeOperationController controler;
-
-//    BootProj08LayerdApplicatioinApplication(EmployeeOperationController controler) {
-//        this.controler = controler;
-//    }	
+   
 
 	public static void main(String[] args) {
 		
@@ -33,24 +23,20 @@ public class BootProj08LayerdApplicatioinApplication {
 				Scanner sc=new Scanner(System.in)){
 			
 			EmployeeOperationController controller = ctx.getBean(EmployeeOperationController.class);
-			
-			
-			System.out.println("**** Insert the Employee Details*******");
-			System.out.println("Enter the Name::");
-			String name=sc.next();
-			System.out.println("Enter Desg::");
-			String deg=sc.next();
-			System.out.println("Enter salary::");
-			double sal=sc.nextDouble();
-			System.out.println("Enter Depertment Number::");
-			int dep=sc.nextInt();
-			//ENAME,JOB,SAL,DEPTNO
-			
-			
-			// create EmployeBean class obj
-			Employee empp=new Employee(dep,name,deg,sal);
-			String processImployee = controller.processImployee(empp);
-			System.out.println(processImployee);
+			/*
+			 * 
+			 * System.out.println("**** Insert the Employee Details*******");
+			 * System.out.println("Enter the Name::"); String name=sc.next();
+			 * System.out.println("Enter Desg::"); String deg=sc.next();
+			 * System.out.println("Enter salary::"); double sal=sc.nextDouble();
+			 * System.out.println("Enter Depertment Number::"); int dep=sc.nextInt();
+			 * //ENAME,JOB,SAL,DEPTNO
+			 * 
+			 * 
+			 * // create EmployeBean class obj Employee empp=new Employee(dep,name,deg,sal);
+			 * String processImployee = controller.processImployee(empp);
+			 */
+//			System.out.println(processImployee);
 			
 			
 			System.out.println("Enter The First Deg::");
